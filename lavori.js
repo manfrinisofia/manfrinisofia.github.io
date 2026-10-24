@@ -23,7 +23,12 @@ window.LAVORI = [
   },
   "cliente": "",
   "anno": "",
-  "link": [],
+  "link": [
+   {
+    "testo": "Ammazzacaffè — Euphoria: remember this feeling",
+    "url": "https://www.ammazzacaffe.org/euphoria-remember-this-feeling/"
+   }
+  ],
   "cover": {
    "w": 1000,
    "h": 1000,
@@ -116,7 +121,12 @@ window.LAVORI = [
   },
   "cliente": "",
   "anno": "",
-  "link": [],
+  "link": [
+   {
+    "testo": "Ammazzacaffè — Rovereto: un comune fuori dal “comune”",
+    "url": "https://www.ammazzacaffe.org/rovereto-un-comune-fuori-dal-comune/"
+   }
+  ],
   "cover": {
    "w": 1800,
    "h": 1351,
@@ -259,6 +269,10 @@ window.LAVORI = [
    {
     "testo": "Instagram @lascaletta",
     "url": "https://www.instagram.com/lascaletta/"
+   },
+   {
+    "testo": "Facebook La Scaletta",
+    "url": "https://www.facebook.com/people/Bar-Trattoria-la-Scaletta/100057206179604/"
    }
   ],
   "cover": {

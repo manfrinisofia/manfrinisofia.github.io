@@ -99,7 +99,7 @@ function fillProject(l) {
   document.getElementById('pvTitle').textContent = tr(l.titolo);
   document.getElementById('pvDesc').textContent = tr(l.descrizione);
   document.getElementById('pvLinks').innerHTML = l.link.map(k =>
-    `<a class="link-line" href="${esc(k.url)}" target="_blank" rel="noopener">${esc(k.testo)} ↗</a>`).join('');
+    `<a class="link-line" href="${esc(k.url)}" target="_blank" rel="noopener">${esc(k.testo)}&nbsp;↗</a>`).join('');
   document.getElementById('pvCount').textContent = `${l.immagini.length} ${ui('images')}`;
   const next = LAVORI[(LAVORI.indexOf(l) + 1) % LAVORI.length];
   document.getElementById('pvNext').innerHTML = LAVORI.length > 1 ? `

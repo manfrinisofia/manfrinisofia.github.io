@@ -31,7 +31,7 @@ window.I18N_EN = {
   'contact.title': '<em>Get in touch</em>',
   'contact.phone': 'Phone',
   'contact.base': 'Based in',
-  'contact.country': 'Italy',
+  'contact.country': 'Rovereto (TN), Italy',
 
   'footer.whatsapp': 'Message me on WhatsApp',
   'footer.rights': '© 2026 Sofia Manfrini — All rights reserved',
