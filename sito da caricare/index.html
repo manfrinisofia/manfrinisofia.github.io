@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sofia Manfrini — Graphic Designer, Fotografa & Social Media Manager</title>
+  <meta name="description" content="Portfolio di Sofia Manfrini: graphic design, fotografia e social media management. Immagini e identità visive curate nei dettagli.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a href="#top" class="logo">Sofia<span>.</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#chi-sono" data-i18n="nav.about">Chi sono</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contatti" class="nav-cta" data-i18n="nav.contact">Contatti</a>
+    </nav>
+    <div class="lang-switch" id="langSwitch">
+      <button data-lang="it" class="active">IT</button><span>/</span><button data-lang="en">EN</button>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-text">
+      <p class="eyebrow reveal">Portfolio — 2026</p>
+      <h1 class="reveal" data-i18n="hero.title">Comunicazione<br>visiva, <em>curata</em><br>nei dettagli.</h1>
+      <p class="hero-roles reveal" data-i18n="hero.roles"><span>Graphic Design</span><i>·</i><span>Fotografia</span><i>·</i><span>Social Media</span></p>
+      <div class="hero-actions reveal">
+        <a href="#portfolio" class="btn btn-dark" data-i18n="hero.cta">Guarda i lavori</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <figure class="hero-portrait reveal"><img src="assets/lavori/foto/foto-rovereto/rove17.jpg" srcset="assets/lavori/foto/foto-rovereto/thumb/rove17.jpg 900w, assets/lavori/foto/foto-rovereto/rove17.jpg 1800w" sizes="(max-width: 980px) 92vw, 45vw" alt="Rovereto — street photography" fetchpriority="high"></figure>
+      <span class="hero-caption" data-i18n="about.caption">Rovereto <i>·</i> Street photography</span>
+    </div>
+    <a href="#chi-sono" class="scroll-hint">Scroll</a>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track" data-i18n="marquee">
+      <span>Brand Identity</span><i>✦</i><span>Fotografia Editoriale</span><i>✦</i><span>Content Creation</span><i>✦</i><span>Social Strategy</span><i>✦</i><span>Art Direction</span><i>✦</i>
+      <span>Brand Identity</span><i>✦</i><span>Fotografia Editoriale</span><i>✦</i><span>Content Creation</span><i>✦</i><span>Social Strategy</span><i>✦</i><span>Art Direction</span><i>✦</i>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about section" id="chi-sono">
+    <div class="about-img reveal">
+      <img src="assets/sofia-ritratto.jpg" srcset="assets/sofia-ritratto-800.jpg 800w, assets/sofia-ritratto.jpg 1400w" sizes="(max-width: 980px) 90vw, 42vw" alt="Sofia Manfrini" loading="lazy" decoding="async">
+    </div>
+    <div class="about-text">
+      <p class="eyebrow reveal" data-i18n="about.eyebrow">01 — Chi sono</p>
+      <h2 class="reveal"><em>Sofia Manfrini</em><br>Visual &amp; Brand Designer</h2>
+      <p class="reveal" data-i18n="about.p1">
+        Graphic designer, fotografa e social media manager. Unisco l'occhio per l'immagine
+        alla cura per il dettaglio, per costruire identità visive coerenti, eleganti e riconoscibili.
+      </p>
+      <div class="education reveal">
+        <p class="education-title" data-i18n="edu.title">Formazione</p>
+        <ul>
+          <li>
+            <span class="edu-when" data-i18n="edu.1when">In corso</span>
+            <div><strong data-i18n="edu.1what">Specializzazione biennale in grafica</strong><span>TAG — Trentino Alta Formazione Grafica</span></div>
+          </li>
+          <li>
+            <span class="edu-when" data-i18n="edu.2when">Laurea triennale</span>
+            <div><strong data-i18n="edu.2what">Scienze della Comunicazione</strong><span data-i18n="edu.2where">Università degli Studi di Verona</span></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="portfolio section" id="portfolio">
+    <div class="section-head split">
+      <div>
+        <p class="eyebrow reveal">02 — Portfolio</p>
+        <h2 class="reveal" data-i18n="portfolio.title">Lavori <em>selezionati</em></h2>
+      </div>
+      <div class="filters reveal" id="filters">
+        <button class="active" data-filter="all" data-i18n="filter.all">Tutti</button>
+        <button data-filter="foto" data-i18n="filter.foto">Fotografia</button>
+        <button data-filter="social">Social Media</button>
+        <button data-filter="grafica" data-i18n="filter.grafica">Grafica</button>
+      </div>
+    </div>
+    <div class="projects" id="projects"></div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contatti">
+    <div class="contact-text">
+      <p class="eyebrow reveal" data-i18n="contact.eyebrow">03 — Contatti</p>
+      <h2 class="reveal" data-i18n="contact.title"><em>Recapiti</em></h2>
+    </div>
+    <ul class="contact-info reveal">
+      <li><span>Email</span><a href="mailto:manfrini.sofia@gmail.com">manfrini.sofia@gmail.com</a></li>
+      <li><span data-i18n="contact.phone">Telefono</span><a href="tel:+393349367205">+39 334 936 7205</a></li>
+      <li><span data-i18n="contact.base">Base</span><span class="plain" data-i18n="contact.country">Italia</span></li>
+    </ul>
+  </section>
+
+  <footer class="footer">
+    <a href="#top" class="logo big">Sofia Manfrini<span>.</span></a>
+    <div class="footer-row">
+      <p data-i18n="footer.rights">© 2026 Sofia Manfrini — Tutti i diritti riservati</p>
+      <a class="whatsapp" href="https://wa.me/393349367205" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm0 18.15a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24Zm4.52-6.17c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.29Z"/></svg>
+        <span data-i18n="footer.whatsapp">Scrivimi su WhatsApp</span>
+      </a>
+    </div>
+  </footer>
+
+  <!-- PROJECT VIEW -->
+  <div class="project-view" id="projectView" aria-hidden="true">
+    <div class="pv-bar">
+      <button class="pv-back" id="pvBack" data-i18n="pv.back">← Tutti i lavori</button>
+      <span class="pv-count" id="pvCount"></span>
+    </div>
+    <div class="pv-head">
+      <p class="eyebrow" id="pvCat"></p>
+      <h2 id="pvTitle"></h2>
+      <p class="pv-desc" id="pvDesc"></p>
+      <div class="pv-links" id="pvLinks"></div>
+    </div>
+    <div class="pv-gallery" id="pvGallery"></div>
+    <div class="pv-next" id="pvNext"></div>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lb-close" id="lbClose" aria-label="Chiudi">×</button>
+    <button class="lb-nav lb-prev" id="lbPrev" aria-label="Precedente">‹</button>
+    <img src="" alt="" id="lbImg">
+    <button class="lb-nav lb-next" id="lbNext" aria-label="Successiva">›</button>
+    <p class="lb-counter" id="lbCounter"></p>
+  </div>
+
+  <script src="lavori.js"></script>
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
