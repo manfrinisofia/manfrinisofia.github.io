@@ -176,6 +176,27 @@ h2 { font-size: clamp(2.6rem, 5.5vw, 4.6rem); margin-bottom: 1.5rem; }
 .whatsapp:hover { background: var(--cream); color: var(--ink); border-color: var(--cream); }
 .footer-row { align-items: center; }
 
+.footer-copy i { font-style: normal; margin: 0 .5rem; color: var(--taupe); }
+.footer-link { color: var(--cream); border-bottom: 1px solid rgba(246, 241, 234, .3); transition: border-color .3s; }
+.footer-link:hover { border-color: var(--taupe); }
+
+/* PAGINA PRIVACY */
+.legal-page .nav { gap: 2rem; }
+.legal-back { margin-left: auto; font-size: .75rem; letter-spacing: .2em; text-transform: uppercase; }
+.legal-back:hover { color: var(--taupe); }
+.legal-page .lang-switch { margin-left: 2rem; }
+.legal { max-width: 52rem; margin: 0 auto; padding-top: clamp(8rem, 14vw, 11rem); }
+.legal h1 { font-size: clamp(2.8rem, 6vw, 4.6rem); margin-bottom: .8rem; }
+.legal-updated { font-size: .75rem; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); margin-bottom: 3rem; }
+.legal h2 { font-size: clamp(1.7rem, 3vw, 2.2rem); font-weight: 400; margin: 3rem 0 1rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+.legal h3 { font-family: var(--sans); font-size: .78rem; font-weight: 400; letter-spacing: .22em; text-transform: uppercase; color: var(--taupe); margin: 1.6rem 0 .5rem; }
+.legal p, .legal li { color: var(--muted); margin-bottom: 1rem; }
+.legal strong { color: var(--ink); font-weight: 400; }
+.legal ul { padding-left: 1.2rem; }
+.legal a:not(.btn) { color: var(--ink); border-bottom: 1px solid var(--taupe); }
+.legal a:hover { color: var(--taupe); }
+a[href^="tel:"] { white-space: nowrap; }
+
 /* PROJECT CARDS */
 .projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3.5rem 2rem; }
 .project { display: block; }
@@ -297,6 +318,8 @@ h2 { font-size: clamp(2.6rem, 5.5vw, 4.6rem); margin-bottom: 1.5rem; }
   .pv-next { padding: 3.5rem 1.25rem 4rem; }
   .hero-roles { letter-spacing: .18em; font-size: .78rem; }
   .footer-row { flex-direction: column-reverse; align-items: flex-start; }
+  .legal-back { display: none; }
+  .legal-page .lang-switch { margin-left: auto; margin-right: 0; }
 }
 @media (max-width: 600px) {
   .projects { grid-template-columns: 1fr; gap: 2.8rem; }

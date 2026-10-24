@@ -1,0 +1,9 @@
+Caratteri inclusi nel sito:
+
+- Cormorant Garamond — Copyright 2015 The Cormorant Project Authors
+  https://github.com/CatharsisFonts/Cormorant
+- Jost — Copyright 2020 The Jost Project Authors
+  https://github.com/indestructible-type/Jost
+
+Entrambi distribuiti con licenza SIL Open Font License, Version 1.1:
+https://openfontlicense.org
