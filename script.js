@@ -57,14 +57,22 @@ document.getElementById('langSwitch').addEventListener('click', e => {
 // Portfolio — dati generati in lavori.js da genera_portfolio.py
 const LAVORI = window.LAVORI || [];
 const projectsEl = document.getElementById('projects');
+const tagProjectsEl = document.getElementById('tagProjects');
+// I lavori TAG hanno una sezione propria: il portfolio mostra solo gli altri
+const sezione = l => (l.cat === 'tag' ? 'tag' : 'portfolio');
+const lavoriDi = sez => LAVORI.filter(l => sezione(l) === sez);
 const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const tr = o => o[lang] || o.it;
 let filter = 'all';
 
-function renderProjects() {
-  projectsEl.innerHTML = LAVORI.map((l, i) => `
-    <a class="project reveal in${filter !== 'all' && l.cat !== filter ? ' hide' : ''}" href="#lavoro/${l.id}" data-cat="${l.cat}">
-      <div class="project-img${l.cat === 'grafica' ? ' contain' : ''}" style="background:${l.tema.bg}"><img src="${l.cover.thumb}" srcset="${l.cover.thumb} 900w, ${l.cover.full} 1800w" sizes="(max-width: 600px) 92vw, (max-width: 980px) 46vw, 30vw" alt="${esc(tr(l.titolo))}" loading="lazy" decoding="async"></div>
+// Card di un lavoro (copertina 4:5 + meta), numerata all'interno della sua sezione
+function projectCard(l, i) {
+  // grafica e copertine molto orizzontali (es. la striscia dei tarocchi) intere, senza ritaglio
+  const wide = l.cover.w / l.cover.h > 2;
+  const contain = l.cat === 'grafica' || wide;
+  return `
+    <a class="project reveal in${sezione(l) === 'portfolio' && filter !== 'all' && l.cat !== filter ? ' hide' : ''}" href="#lavoro/${l.id}" data-cat="${l.cat}">
+      <div class="project-img${contain ? ' contain' : ''}${wide ? ' wide' : ''}" style="background:${l.tema.bg}"><img src="${l.cover.thumb}" srcset="${l.cover.thumb} 900w, ${l.cover.full} 1800w" sizes="(max-width: 600px) 92vw, (max-width: 980px) 46vw, 30vw" alt="${esc(tr(l.titolo))}" loading="lazy" decoding="async"></div>
       <div class="project-meta">
         <span class="project-num">${String(i + 1).padStart(2, '0')}</span>
         <div>
@@ -73,7 +81,12 @@ function renderProjects() {
         </div>
         <span class="project-arrow">→</span>
       </div>
-    </a>`).join('');
+    </a>`;
+}
+
+function renderProjects() {
+  projectsEl.innerHTML = lavoriDi('portfolio').map(projectCard).join('');
+  tagProjectsEl.innerHTML = lavoriDi('tag').map(projectCard).join('');
 }
 
 document.getElementById('filters').addEventListener('click', e => {
@@ -99,10 +112,17 @@ function fillProject(l) {
   document.getElementById('pvTitle').textContent = tr(l.titolo);
   document.getElementById('pvDesc').textContent = tr(l.descrizione);
   document.getElementById('pvLinks').innerHTML = l.link.map(k =>
-    `<a class="link-line" href="${esc(k.url)}" target="_blank" rel="noopener">${esc(k.testo)}&nbsp;↗</a>`).join('');
+    `<a class="link-line" href="${esc(k.url)}" target="_blank" rel="noopener">${esc(k.testo)}&nbsp;↗</a>`).join('') +
+    (l.download || []).map(d => `
+    <a class="pv-download" href="${esc(d.url)}" download>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19.5h14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>${esc(tr(d.testo))}${d.size ? ` <span class="pv-size"><i>·</i>&nbsp;${esc(d.size)}</span>` : ''}</span>
+    </a>`).join('');
   document.getElementById('pvCount').textContent = `${l.immagini.length} ${ui('images')}`;
-  const next = LAVORI[(LAVORI.indexOf(l) + 1) % LAVORI.length];
-  document.getElementById('pvNext').innerHTML = LAVORI.length > 1 ? `
+  // "Lavoro successivo" scorre solo tra i lavori della stessa sezione (portfolio o TAG)
+  const gruppo = lavoriDi(sezione(l));
+  const next = gruppo[(gruppo.indexOf(l) + 1) % gruppo.length];
+  document.getElementById('pvNext').innerHTML = gruppo.length > 1 ? `
     <a href="#lavoro/${next.id}"><span class="eyebrow">${ui('next')}</span><strong>${esc(tr(next.titolo))} →</strong></a>` : '';
 }
 
@@ -129,7 +149,8 @@ function galleryCols(l) {
   let n = w >= 1700 ? 4 : w >= 1100 ? 3 : 2;
   const ratio = l.immagini.reduce((t, im) => t + im.w / im.h, 0) / l.immagini.length;
   if (ratio > 1.25) n -= 1;                       // foto orizzontali: colonne più larghe
-  if (w < 600 && l.cat === 'grafica') n = 1;      // menù e grafiche leggibili su smartphone
+  if (ratio > 2.5) n = 1;                         // strisce molto orizzontali (es. tarocchi): una per riga
+  if (w < 600 && (l.cat === 'grafica' || l.cat === 'tag')) n = 1; // menù e grafiche leggibili su smartphone
   return Math.max(1, Math.min(n, l.immagini.length));
 }
 
@@ -168,7 +189,9 @@ const route = () => {
 addEventListener('hashchange', route);
 setLang(lang);
 route();
-document.getElementById('pvBack').addEventListener('click', () => { location.hash = 'portfolio'; });
+// Chiudendo la pagina lavoro si torna alla sezione da cui proviene (portfolio o TAG)
+const backToSection = () => { location.hash = currentProject ? sezione(currentProject) : 'portfolio'; };
+document.getElementById('pvBack').addEventListener('click', backToSection);
 pvGallery.addEventListener('click', e => {
   const fig = e.target.closest('figure');
   if (fig) openLightbox(+fig.dataset.i);
@@ -196,7 +219,7 @@ addEventListener('keydown', e => {
     if (e.key === 'Escape') closeLb();
     if (e.key === 'ArrowRight') showLb(lbIndex + 1);
     if (e.key === 'ArrowLeft') showLb(lbIndex - 1);
-  } else if (e.key === 'Escape' && currentProject) location.hash = 'portfolio';
+  } else if (e.key === 'Escape' && currentProject) backToSection();
 });
 let touchX = null;
 lb.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });

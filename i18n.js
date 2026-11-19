@@ -27,13 +27,14 @@ window.I18N_EN = {
   'filter.foto': 'Photography',
   'filter.grafica': 'Graphic Design',
 
-  'contact.eyebrow': '03 — Contact',
+  'tag.intro': 'Projects created during the two-year specialisation in graphic design at TAG – Trentino Alta Formazione Grafica.',
+
+  'contact.eyebrow': '04 — Contact',
   'contact.title': '<em>Get in touch</em>',
   'contact.phone': 'Phone',
   'contact.base': 'Based in',
   'contact.country': 'Rovereto (TN), Italy',
 
-  'footer.whatsapp': 'Message me on WhatsApp',
   'footer.rights': '© 2026 Sofia Manfrini — All rights reserved',
 
   'pv.back': '← All work',

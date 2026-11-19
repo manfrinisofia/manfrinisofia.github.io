@@ -29,6 +29,7 @@ window.LAVORI = [
     "url": "https://www.ammazzacaffe.org/euphoria-remember-this-feeling/"
    }
   ],
+  "download": [],
   "cover": {
    "w": 1000,
    "h": 1000,
@@ -127,6 +128,7 @@ window.LAVORI = [
     "url": "https://www.ammazzacaffe.org/rovereto-un-comune-fuori-dal-comune/"
    }
   ],
+  "download": [],
   "cover": {
    "w": 1800,
    "h": 1351,
@@ -275,6 +277,7 @@ window.LAVORI = [
     "url": "https://www.facebook.com/people/Bar-Trattoria-la-Scaletta/100057206179604/"
    }
   ],
+  "download": [],
   "cover": {
    "w": 1012,
    "h": 1800,
@@ -512,6 +515,7 @@ window.LAVORI = [
   "cliente": "",
   "anno": "",
   "link": [],
+  "download": [],
   "cover": {
    "w": 1050,
    "h": 600,
@@ -569,6 +573,7 @@ window.LAVORI = [
   "cliente": "",
   "anno": "",
   "link": [],
+  "download": [],
   "cover": {
    "w": 1152,
    "h": 786,
@@ -653,6 +658,183 @@ window.LAVORI = [
     "h": 1800,
     "full": "assets/lavori/grafica/panificio-moderno/prova-remake-menu-caffetteria-p2.jpg",
     "thumb": "assets/lavori/grafica/panificio-moderno/thumb/prova-remake-menu-caffetteria-p2.jpg"
+   }
+  ]
+ },
+ {
+  "id": "felpa-tag",
+  "cat": "tag",
+  "catLabel": {
+   "it": "TAG",
+   "en": "TAG"
+  },
+  "titolo": {
+   "it": "Felpa TAG",
+   "en": "TAG Hoodie"
+  },
+  "descrizione": {
+   "it": "TAG LIFE — Apparel Design. Progetto di grafica per abbigliamento nato per rappresentare l’identità di TAG – Trentino Alta formazione Grafica. Il concept gioca sull’assonanza tra il celebre motto hip-hop “Thug Life” e il mondo del writing urbano: qui la “tag” diventa sia la firma sui muri che l’acronimo della scuola. Una capsule che traduce lo stile street, il tratto vettoriale a contrasto e l’attitudine creativa in un capo identitario.",
+   "en": "TAG LIFE — Apparel Design. An apparel graphics project created to represent the identity of TAG – Trentino Alta formazione Grafica. The concept plays on the assonance between the famous hip-hop motto “Thug Life” and the world of urban writing: here the “tag” becomes both the signature on the walls and the school’s acronym. A capsule that translates street style, high-contrast vector linework and creative attitude into a garment with a strong identity."
+  },
+  "tema": {
+   "bg": "#343434",
+   "fg": "#f0eeec",
+   "accent": "#f05050",
+   "dark": true
+  },
+  "cliente": "",
+  "anno": "",
+  "link": [],
+  "download": [],
+  "cover": {
+   "w": 1600,
+   "h": 960,
+   "full": "assets/lavori/tag/felpa-tag/felpa-2.jpg",
+   "thumb": "assets/lavori/tag/felpa-tag/thumb/felpa-2.jpg"
+  },
+  "immagini": [
+   {
+    "w": 1600,
+    "h": 960,
+    "full": "assets/lavori/tag/felpa-tag/felpa-1.jpg",
+    "thumb": "assets/lavori/tag/felpa-tag/thumb/felpa-1.jpg"
+   },
+   {
+    "w": 1600,
+    "h": 960,
+    "full": "assets/lavori/tag/felpa-tag/felpa-2.jpg",
+    "thumb": "assets/lavori/tag/felpa-tag/thumb/felpa-2.jpg"
+   },
+   {
+    "w": 1600,
+    "h": 960,
+    "full": "assets/lavori/tag/felpa-tag/felpa-3.jpg",
+    "thumb": "assets/lavori/tag/felpa-tag/thumb/felpa-3.jpg"
+   }
+  ]
+ },
+ {
+  "id": "rebranding-menu",
+  "cat": "tag",
+  "catLabel": {
+   "it": "TAG",
+   "en": "TAG"
+  },
+  "titolo": {
+   "it": "Rebranding menù",
+   "en": "Menu rebranding"
+  },
+  "descrizione": {
+   "it": "Rebranding del menù del ristorante “Ramen House”: un lettering arancio dal carattere energico e l’illustrazione blu di una ciotola di ramen definiscono la nuova identità della copertina. All’interno, i piatti sono organizzati in sezioni chiare – ramen, riso, gyoza, specialità, extra e bevande – accompagnate da illustrazioni al tratto, icone per gli allergeni e una pagina illustrata dedicata a “How to eat ramen”. Nella galleria i mockup mostrano la realizzazione concreta del progetto; il menù completo è disponibile in PDF.",
+   "en": "Rebranding of the menu for the “Ramen House” restaurant: an energetic orange lettering and a blue illustration of a ramen bowl define the new identity of the cover. Inside, the dishes are arranged in clear sections – ramen, rice, gyoza, specialities, extras and drinks – paired with line illustrations, allergen icons and an illustrated page devoted to “How to eat ramen”. In the gallery, the mockups show how the project comes to life in print; the full menu is available as a PDF."
+  },
+  "tema": {
+   "bg": "#f4f1e6",
+   "fg": "#21498f",
+   "accent": "#e16826",
+   "dark": false
+  },
+  "cliente": "",
+  "anno": "",
+  "link": [],
+  "download": [
+   {
+    "testo": {
+     "it": "Scarica il menù (PDF)",
+     "en": "Download the menu (PDF)"
+    },
+    "url": "assets/lavori/tag/rebranding-menu/download/menu-ramen-house.pdf",
+    "size": "326 KB"
+   }
+  ],
+  "cover": {
+   "w": 1800,
+   "h": 1350,
+   "full": "assets/lavori/tag/rebranding-menu/img-7752.jpg",
+   "thumb": "assets/lavori/tag/rebranding-menu/thumb/img-7752.jpg"
+  },
+  "immagini": [
+   {
+    "w": 1800,
+    "h": 1350,
+    "full": "assets/lavori/tag/rebranding-menu/img-7752.jpg",
+    "thumb": "assets/lavori/tag/rebranding-menu/thumb/img-7752.jpg"
+   },
+   {
+    "w": 1800,
+    "h": 1350,
+    "full": "assets/lavori/tag/rebranding-menu/img-7749.jpg",
+    "thumb": "assets/lavori/tag/rebranding-menu/thumb/img-7749.jpg"
+   },
+   {
+    "w": 1800,
+    "h": 1350,
+    "full": "assets/lavori/tag/rebranding-menu/img-7753.jpg",
+    "thumb": "assets/lavori/tag/rebranding-menu/thumb/img-7753.jpg"
+   },
+   {
+    "w": 1800,
+    "h": 1350,
+    "full": "assets/lavori/tag/rebranding-menu/img-7750.jpg",
+    "thumb": "assets/lavori/tag/rebranding-menu/thumb/img-7750.jpg"
+   },
+   {
+    "w": 1800,
+    "h": 1350,
+    "full": "assets/lavori/tag/rebranding-menu/img-7751.jpg",
+    "thumb": "assets/lavori/tag/rebranding-menu/thumb/img-7751.jpg"
+   },
+   {
+    "w": 1800,
+    "h": 1350,
+    "full": "assets/lavori/tag/rebranding-menu/img-7754.jpg",
+    "thumb": "assets/lavori/tag/rebranding-menu/thumb/img-7754.jpg"
+   }
+  ]
+ },
+ {
+  "id": "tarocchi",
+  "cat": "tag",
+  "catLabel": {
+   "it": "TAG",
+   "en": "TAG"
+  },
+  "titolo": {
+   "it": "Tarocchi",
+   "en": "Tarot"
+  },
+  "descrizione": {
+   "it": "Tarot Illustration & Card Design. Ideazione e realizzazione grafica di una serie di carte ispirate ai tarocchi tradizionali, nata all’interno dei laboratori di TAG – Trentino Alta formazione Grafica. Sul fronte, ciascuna carta (The Death, The Stars, The Moon, VI, The Empress) traduce il proprio archetipo in una chiave visiva essenziale e d’impatto: dai forti contrasti chiaroscurali e figure d’ombra alle sequenze grafiche e ai richiami simbolici come il gioco di scacchi. Il retro punta invece su un’identità compatta e magnetica, dove un sole fiammeggiante in giallo vibrante spicca sul nero profondo per garantire coesione e mistero a tutto il mazzo.",
+   "en": "Tarot Illustration & Card Design. Concept and graphic design of a series of cards inspired by the traditional tarot, created during the workshops at TAG – Trentino Alta formazione Grafica. On the front, each card (The Death, The Stars, The Moon, VI, The Empress) translates its archetype into a bold, essential visual language: from strong chiaroscuro contrasts and shadow figures to graphic sequences and symbolic references such as the game of chess. The back, by contrast, relies on a compact and magnetic identity, where a flaming sun in vibrant yellow stands out against deep black, giving the whole deck cohesion and mystery."
+  },
+  "tema": {
+   "bg": "#ffffff",
+   "fg": "#1a1a1a",
+   "accent": "#7a5c00",
+   "dark": false
+  },
+  "cliente": "",
+  "anno": "",
+  "link": [],
+  "download": [],
+  "cover": {
+   "w": 1780,
+   "h": 639,
+   "full": "assets/lavori/tag/tarocchi/tarocchi-fronte.jpg",
+   "thumb": "assets/lavori/tag/tarocchi/thumb/tarocchi-fronte.jpg"
+  },
+  "immagini": [
+   {
+    "w": 1780,
+    "h": 639,
+    "full": "assets/lavori/tag/tarocchi/tarocchi-fronte.jpg",
+    "thumb": "assets/lavori/tag/tarocchi/thumb/tarocchi-fronte.jpg"
+   },
+   {
+    "w": 1780,
+    "h": 624,
+    "full": "assets/lavori/tag/tarocchi/tarocchi-retro.jpg",
+    "thumb": "assets/lavori/tag/tarocchi/thumb/tarocchi-retro.jpg"
    }
   ]
  }
